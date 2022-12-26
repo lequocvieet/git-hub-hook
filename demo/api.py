@@ -68,12 +68,15 @@ def hookRepo():
 
 @app.route('/trigger-event', methods=['POST'])
 def triggerEvent():
-    response = request.json
     if(request.headers["X-GitHub-Event"]=="ping"):
-        return jsonify(response)
+        return jsonify("ping success!")
     data = {
-        "name": response["pusher"]["name"],
-        "commit": response["head_commit"]["message"],
+        "time stamp":request.json["head_commit"]["timestamp"],
+        "name": request.json["pusher"]["name"],
+        "commit": request.json["head_commit"]["message"],
+        "added":request.json["head_commit"]["added"],
+        "removed":request.json["head_commit"]["removed"],
+        "modified":request.json["head_commit"]["modified"],
 
     }
     res = trigger_event.delay(data)
