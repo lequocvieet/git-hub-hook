@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "d929cd72-9a40-40a8-a4d3-a25d7c1b1c3f",
+		"name": "Flow-Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15936437"
+	},
+	"item": [
+		{
+			"name": "get all repo task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3.ap.ngrok.io/get-all-repo",
+					"protocol": "https",
+					"host": [
+						"b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3",
+						"ap",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"get-all-repo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " get-all-repo-result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3.ap.ngrok.io/result/get-all-repo/6d0be303-53f5-40eb-9166-2d5d790d0d19",
+					"protocol": "https",
+					"host": [
+						"b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3",
+						"ap",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"result",
+						"get-all-repo",
+						"6d0be303-53f5-40eb-9166-2d5d790d0d19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hook repo task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"owner\":\"lequocvieet\",\n\"repo_name\":\"booking-chain\",\n\"host\":\"b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3.ap.ngrok.io\",\n\"endpoint\":\"trigger-event\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3.ap.ngrok.io/hook-repo",
+					"protocol": "https",
+					"host": [
+						"b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3",
+						"ap",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"hook-repo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hook repo result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3.ap.ngrok.io/result/hook-repo/23736e09-c563-4854-9325-53b5b7a0f455",
+					"protocol": "https",
+					"host": [
+						"b158-2405-4802-29b-51a0-17fa-c881-3c47-56b3",
+						"ap",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"result",
+						"hook-repo",
+						"23736e09-c563-4854-9325-53b5b7a0f455"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get chat telegram id ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot5883012702:AAF0ur0clS65r2UGTkh56QgIK0YetMGqwmk/getUpdates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot5883012702:AAF0ur0clS65r2UGTkh56QgIK0YetMGqwmk",
+						"getUpdates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

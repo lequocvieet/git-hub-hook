@@ -47,6 +47,7 @@ def Github_Hook_Repository(OWNER, REPO_NAME, HOST, ENDPOINT):
     EVENTS = ["push", "pull_request"]
     repo = gh.get_repo(
         "{owner}/{repo_name}".format(owner=OWNER, repo_name=REPO_NAME))
+    
     res = repo.create_hook("web", config, EVENTS, active=True)
     response={
         "hook repo url": res.url
