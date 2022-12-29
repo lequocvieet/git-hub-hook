@@ -2,7 +2,6 @@
 from flask import Flask, request, json, jsonify
 from demo.git_hub import *
 from demo.task import *
-from celery.result import AsyncResult
 
 
 app = Flask(__name__)
